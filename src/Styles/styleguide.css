@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+scroll-padding-top: 2rem;
+  }
+  
+  h1, h2, h3 {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .style-title{
+    margin-top: 8%;
+    text-align: center;
+  }
+  
+  p {
+    color: white;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #f9c80e;
+    text-decoration: none;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #f9c80e;
+    color: #000;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .meme {
+    border: 5px solid #f9c80e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Additional styles for new elements */
+  
+  .title {
+    color: #f9c80e;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .color-scheme {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .color {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pink { background-color: #f78fb3; }
+  .blue { background-color: #81cfe0; }
+  .green { background-color: #a3de83; }
+  .yellow { background-color: #ffeb3b; }
+  .red { background-color: #e57373; }
+  
+  .font {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+  }
+  
+  .font-example {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .btn-rounded {
+    border-radius: 50px;
+    margin-right: 20px;
+  }
+  
+  /* Media queries for responsive design */
+  
+  @media (max-width: 768px) {
+    .color-scheme {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .color {
+      margin-bottom: 10px;
+    }
+    
+    .buttons {
+      flex-wrap: wrap;
+    }
+    
+    .btn-rounded {
+      display: inline-block;
+margin: 10px;
+padding: 10px 20px;
+border-radius: 25px;
+background-color: #000000;
+color: #ffffff;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+  }
+  .btn-rounded:hover {
+    background-color: #ffffff;
+    color: #000000;
+    }
+    
+    img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    }
+    .color-block {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin-right: 10px;
+      border: 1px solid #000;
+    }
+    
+    .pink {
+      background-color: #b20b5f;
+    }
+    
+    .blue {
+      background-color: #1e03e9;
+    }
+    
+    .green {
+      background-color: #044f1d;
+    }
+    
+    .yellow {
+      background-color: #cfb001;
+    }
+    
+    .red {
+      background-color: #8f1701;
+    }
+
+    .grey{
+      background-color: #333131;
+    }
+
+    .style-container {
+      background-color: #212020;
+      border-radius: 10px;
+      padding: 50px;
+      margin: auto;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .button-container-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 0;
+    }
+    
+    /* Style for the buttons */
+    .button {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover{
+      background-color: gray;
+    }
+    
+    /* Style for the left button */
+    .button-left-bottom {
+      margin-right: auto;
+    }
+    
+    /* Style for the right button */
+    .button-right-bottom {
+      margin-left: auto;
+    }
+    
+    /* Style for the icon in the buttons */
+    .fa-arrow-left,
+    .fa-arrow-right {
+      margin-right: 10px;
+    }
+ 

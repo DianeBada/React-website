@@ -1,0 +1,103 @@
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    
+  
+  }
+
+.navbar ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+  }
+  
+  .navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .navbar button{
+    cursor: pointer;
+  }
+  .navbar #open
+  {
+    padding-left: 0px;
+  }
+.navbar #open .hiddenLinks{
+    display: inherit;
+    margin-left: 30px;
+}
+.navbar #close .hiddenLinks{
+    display: none !important;
+}
+.navbar #open a{
+    width: 70px;
+    margin: 2px;
+}
+
+@media only screen and (max-width: 900px){
+    .navbar .responsive-nav a {
+        width: 70px; 
+    }
+    .navbar .responsive-nav{
+        padding-left: 10px;
+    }
+    }
+@media only screen and (max-width: 600px)
+{
+    .navbar {
+        background-color: grey;
+        font-size: 20px;
+        text-align: center;
+        
+    }
+    .navbar .navLinks a{
+        display: none;
+    }
+
+    .navbar button{
+        margin-right: 400px;
+    }
+
+   
+}
+@media only screen and (min-width: 600px)
+{
+    .navbar button{
+        display: none
+    }
+
+    .hiddenLinks li{
+        display: none;
+    }
+}
