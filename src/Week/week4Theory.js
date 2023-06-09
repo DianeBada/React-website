@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function WeekFourTheory() {
   return (
     <>
-      <h1>Context and Conventions</h1>
+      <h1>Context and Conventions - creating meaning on the web</h1>
       <p className="date">Posted on April 15, 2023</p>
       <main>
         <section className="blog-content">

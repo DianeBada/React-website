@@ -32,7 +32,7 @@ function WeekReflection() {
               <ArrowCircleLeftIcon/> Previous
             </button>
             </Link>          
-            <Link to = "/WeekReflection">
+            <Link to = "/week9">
             <button className="button button-right-bottom">
               Next <ArrowCircleRightIcon/>
             </button>
