@@ -1,5 +1,6 @@
 {
   "name": "react-internet-art-webs",
+  "homepage": "https://DianeBada.github.io/React-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,11 +16,14 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "react-swipeable": "^7.0.1",
     "styled-components": "^5.3.11",
     "swiper": "^9.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

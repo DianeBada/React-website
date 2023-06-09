@@ -4,22 +4,22 @@ import { Link } from "react-router-dom";
 
 function DesignSection() {
   return (
-    <div>
+    <div className="design-section">
       <section className="design-title-container">
-        <p className="design-title">WELCOME TO MY DESIGN SECTION</p>
+        <h1 className="design-title">Welcome to My Design Section</h1>
+        <p className="design-description">Explore the beauty and creativity behind the chaos of student design.</p>
       </section>
 
       <section className="button-container">
-        <Link to = "/Wireframe">
-        <button className="button">WireFrames</button>
+        <Link to="/Wireframe" className="button-link">
+          <button className="button">Wireframes</button>
         </Link>
-        <Link to = "/StyleGuide">
-        <button className="button">Style Guide</button>
+        <Link to="/StyleGuide" className="button-link">
+          <button className="button">Style Guide</button>
         </Link>
-        <Link to = "/IxDProcess">
-        <button className="button">IxD Process</button>
+        <Link to="/IxDProcess" className="button-link">
+          <button className="button">IxD Process</button>
         </Link>
-       
       </section>
     </div>
   );

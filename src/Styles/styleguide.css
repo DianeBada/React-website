@@ -163,7 +163,7 @@ transition: background-color 0.3s ease;
     }
     
     .pink {
-      background-color: #b20b5f;
+      background-color: rgb(218, 30, 174),
     }
     
     .blue {

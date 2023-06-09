@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
-    /* margin: 0;
-    padding: 0; */
+   
     left: 0;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
     box-sizing: border-box;
 }
 
-/* root values */
 :root{
     --container-color: #1a1e21;
     --second-color: rgba(77, 228, 255);
@@ -243,148 +241,4 @@ body{
         width: 100%
     }
 }
-
-@media (max-width: 768px){
-    .nav{
-        padding: 10px 0;
-    }
-
-    section{
-        padding: 2rem 0 !important;
-    }
-
-    .header-content{
-        margin-top: 3rem !important;
-    }
-
-    .home{
-        min-height: 380px;
-    }
-
-    .home-title{
-        font-size: 3rem;
-    }
-
-    .header-title{
-        font-size: 2rem;
-    }
-
-    .header-img{
-        height: 370px;
-    }
-
-    .about{
-        flex-direction: column;
-    }
-
-    .about .contentBx{
-        min-width: 100%;
-        width: 100%;
-        text-align: center;
-        padding-right: 0px;
-    }
-
-    .about .contentBx,
-    .about .imgBx{
-        min-width: 100%;
-        width: 100%;
-        padding-right: 0px;
-        text-align: center;
-    }
-
-    .about .imgBx{
-        min-height: 250px;
-    }
-
-    .btn2{
-        margin-bottom: 30px;
-    }
-
-    .post-header{
-        height: 435px;
-    }
-
-    .post-header{
-        margin-top: 9rem !important;
-    }
-}
-
-@media (max-width: 570px){
-    .post-header{
-        height: 390px;
-    }
-
-    .header-title{
-        width: 100%;
-    }
-
-    .header-img{
-        height: 340px;
-    }
-}
-
-@media (max-width: 396px){
-    .home-title{
-        font-size: 2rem;
-    }
-
-    .home-subtitle{
-        font-size: 0.9rem;
-    }
-
-    .home{
-        min-height: 300px;
-    }
-
-    .post-box{
-        padding: 10px;
-    }
-
-    .header-title{
-        font-size: 1.4rem;
-    }
-
-    .header-img{
-        height: 240px;
-    }
-
-    .post-header{
-        height: 335px;
-    }
-
-    .header-img{
-        height: 340px;
-    }
-}
-
-/* Footer Media Query */
-@media (max-width: 991px){
-    footer{
-        padding: 40px;
-        font-size: 20px;
-    }
-
-    footer .footer-container{
-        flex-direction: column;
-    }
-
-    footer .footer-container .sec{
-        margin-right: 0;
-        margin-bottom: 40px;
-    }
-
-    footer .footer-container .sec.aboutus{
-        width: 100% !important;
-    }
-
-    footer .footer-container .quicklinks{
-        width: 100%;
-    }
-
-    footer .footer-container .contactBx{
-        width: 100%;
-    }
-}
-
-
 

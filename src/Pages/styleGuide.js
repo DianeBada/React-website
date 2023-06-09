@@ -19,14 +19,14 @@ function StyleGuide() {
         <h2>Colors</h2>
         <p>
           The color scheme for the website includes different hues of pink,
-          blue, green, yellow, and red.
+          blue, green, yellow, and red. The Primary colours though, mainly consist of grey and a pinkish-purplish colour.
         </p>
+        <section className="color-block grey"></section>
         <section className="color-block pink"></section>
         <section className="color-block blue"></section>
         <section className="color-block green"></section>
         <section className="color-block yellow"></section>
         <section className="color-block red"></section>
-        <section className="color-block grey"></section>
 
         <h2>Buttons</h2>
         <p>

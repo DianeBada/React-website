@@ -1,0 +1,88 @@
+.hp_wireframe_container {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .hp_wireframe_container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hp_wireframe_container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .wire-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .design-section {
+    padding: 40px;
+    background-color: #f5f5f5;
+    background-image: url("../images/Website\ Art\ 4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .design-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .design-content {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    margin: 0 10px;
+  }
+  
+  .button-container-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .button-left-bottom {
+    margin-right: auto;
+  }
+  
+  .button-right-bottom {
+    margin-left: auto;
+  }
+  

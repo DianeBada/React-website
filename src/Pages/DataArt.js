@@ -1,163 +1,233 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function DataArt() {
+  const canvasRef = useRef(null);
+  const particlesRef = useRef([]);
+  const imagesRef = useRef([]);
+  const activeParticlesRef = useRef([]);
+  const mousePosRef = useRef({ x: -100, y: -100 });
+  let flashing = true;
+
   useEffect(() => {
-    const canvas = document.getElementById('galaxy');
+    const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const images = [];
-    const displayInterval = 1600; // 2 seconds
-    let displayedImagesCount = 0;
-    let particles = [];
-    let canDisplayImages = false; // Flag to determine if images can be displayed
+    const particles = [];
+    const numParticles = 100;
+    const particleRadius = 20;
+    const particleSpeed = 3;
+    const particleBounce = 0.9;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Set up the text to be displayed
-    const text1 = "What's the beauty";
-    const text2 = "Behind the student chaos, you may ask?";
-    const text3 = 'MEMES!';
-    const text4 = "Some of those were beautifully hilarious, right?";
-    const textFont = '62px sans-serif';
-    ctx.font = textFont;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    const textWidth1 = ctx.measureText(text1).width;
-    const textWidth2 = ctx.measureText(text2).width;
-    const textWidth3 = ctx.measureText(text3).width;
-    const textHeight = parseInt(textFont, 10);
+    // Create particles with random positions, velocities, and colors
+    for (let i = 0; i < numParticles; i++) {
+      const particle = {
+        x: Math.random() * (canvas.width - 2 * particleRadius) + particleRadius,
+        y: Math.random() * (canvas.height - 2 * particleRadius) + particleRadius,
+        vx: (Math.random() - 0.5) * particleSpeed,
+        vy: (Math.random() - 0.5) * particleSpeed,
+        color: getRandomColor(),
+        memeUrl: null,
+        isMemeVisible: false
+      };
+      particles.push(particle);
+    }
 
-    // Wait for the font to be loaded
-    document.fonts.ready.then(() => {
-      // Clear the canvas
+    particlesRef.current = particles;
+
+    function getRandomColor() {
+      const colors = ['#FF3E4D', '#25D2A6', '#FFC300', '#8D3DAF', '#00C1FF'];
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw the first text
-      ctx.fillStyle = 'white';
-      ctx.fillText(text1, canvas.width / 2, canvas.height / 2);
+      for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
 
-      // Wait 2 seconds and then display the second text
-      setTimeout(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillText(text2, canvas.width / 2, canvas.height / 2);
-
-        // Wait 2 seconds and then display the third text
-        setTimeout(() => {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.fillText(text3, canvas.width / 2, canvas.height / 2);
-          canDisplayImages = true; // Set the flag to true to allow image display
-
-          // Wait 2 seconds and then clear the canvas and fetch the images
-          setTimeout(() => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            fetchImages();
-          }, 2000);
-
-        }, 2000);
-
-      }, 2000);
-    });
-
-    function fetchImages() {
-      fetch("https://www.reddit.com/r/CollegeMemes/.json?limit=25")
-        .then((response) => response.json())
-        .then((data) => {
-          const imagePosts = data.data.children.filter((post) => post.data.post_hint === "image");
-          images.push(...imagePosts.map((post) => post.data.url));
-          setInterval(displayImage, displayInterval);
-        })
-        .catch((error) => console.error(error));
-    }
-    let allParticlesDissipated = false; // flag to track when all particles have dissipated
-
-    function displayImage() {
-      if (canDisplayImages && images.length > 0 && displayedImagesCount < images.length) {
-        const imgUrl = images[displayedImagesCount];
-        const img = new Image();
-        img.onload = function() {
-          const maxWidth = 300;
-          const maxHeight = 400;
-          let width = img.width;
-          let height = img.height;
-          if (width > maxWidth) {
-            height *= maxWidth / width;
-            width = maxWidth;
-          }
-          if (height > maxHeight) {
-            width *= maxHeight / height;
-            height = maxHeight;
-          }
-          const x = Math.random() * (canvas.width - width);
-          const y = Math.random() * (canvas.height - height);
-          ctx.drawImage(img, x, y, width, height);
-          displayedImagesCount++;
-          if (displayedImagesCount === images.length) {
-            // Explode the images
-            let particles = [];
-            const particleCount = 1000;
-            for (let i = 0; i < particleCount; i++) {
-              const particle = {
-                x: canvas.width / 2,
-                y: canvas.height / 2,
-                radius: Math.random() * 5 + 1,
-                color: `hsl(${Math.random() * 360}, 50%, 50%)`,
-                velocity: {
-                  x: (Math.random() - 0.5) * 5,
-                  y: (Math.random() - 0.5) * 5
-                }
-              };
-              particles.push(particle);
-            }
-            function animate() {
-              requestAnimationFrame(animate);
-              ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-              for (let i = 0; i < particles.length; i++) {
-                ctx.beginPath();
-                ctx.arc(particles[i].x, particles[i].y, particles[i].radius, 0, Math.PI * 2);
-                ctx.fillStyle = particles[i].color;
-                ctx.fill();
-
-                particles[i].x += particles[i].velocity.x;
-                particles[i].y += particles[i].velocity.y;
-                if (particles[i].radius < 0.1) {
-                  particles[i].radius = 0.1;
-                }
-              }
-
-              particles = particles.filter(p => p.radius > 0.1); // Filter out particles with radius < 0.1
-
-              if (particles.length <= 0.1) {
-                // All particles have dissipated, so display final text
-                displayFinalText();
-              }
-            }
-
-            function displayFinalText() {
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = 'white';
-              ctx.font = 'bold 48px sans-serif';
-              ctx.textAlign = 'center';
-              ctx.fillText('Thank you for watching!', canvas.width / 2, canvas.height / 2);
-            }
-
-            animate(); // Start the animation loop after the images have exploded
-          }
-        };
-        img.src = imgUrl;
+        // Draw the particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particleRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        ctx.closePath();
       }
     }
 
-    fetchImages();
+    function updateParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
+
+        // Update particle position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Bounce off the walls
+        if (
+          particle.x - particleRadius <= 0 ||
+          particle.x + particleRadius >= canvas.width
+        ) {
+          particle.vx *= -particleBounce;
+        }
+        if (
+          particle.y - particleRadius <= 0 ||
+          particle.y + particleRadius >= canvas.height
+        ) {
+          particle.vy *= -particleBounce;
+        }
+      }
+    }
+
+    function handleMouseClick(event) {
+      const canvasRect = canvas.getBoundingClientRect();
+      const clickX = event.clientX - canvasRect.left;
+      const clickY = event.clientY - canvasRect.top;
+
+      for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
+        const dx = clickX - particle.x;
+        const dy = clickY - particle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance <= particleRadius) {
+          if (!particle.isMemeVisible) {
+            // Render meme
+            if (imagesRef.current.length > 0) {
+              const randomIndex = Math.floor(Math.random() * imagesRef.current.length);
+              const memeUrl = imagesRef.current[randomIndex];
+              particle.memeUrl = memeUrl;
+              particle.isMemeVisible = true;
+              activeParticlesRef.current.push(particle);
+              imagesRef.current.splice(randomIndex, 1);
+
+              // Create a new image element
+              const img = new Image();
+              img.src = memeUrl;
+
+              img.onload = () => {
+                let imgWidth = img.width;
+                let imgHeight = img.height;
+
+                // Check if image size exceeds canvas size
+                if (imgWidth > canvas.width || imgHeight > canvas.height) {
+                  const aspectRatio = imgWidth / imgHeight;
+
+                  // Reduce image size proportionally to fit within the canvas
+                  if (imgWidth > canvas.width) {
+                    imgWidth = canvas.width;
+                    imgHeight = imgWidth / aspectRatio;
+                  }
+                  if (imgHeight > canvas.height) {
+                    imgHeight = canvas.height;
+                    imgWidth = imgHeight * aspectRatio;
+                  }
+                }
+
+                // Draw the image on the canvas
+                const centerX = canvas.width / 2 - imgWidth / 2;
+                const centerY = canvas.height / 2 - imgHeight / 2;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
+
+                // Reset particle visibility after 4 seconds
+                setTimeout(() => {
+                  particle.isMemeVisible = false;
+                  particle.memeUrl = null;
+                  activeParticlesRef.current = activeParticlesRef.current.filter(
+                    p => p !== particle
+                  );
+                  drawParticles();
+                }, 4000);
+              };
+            }
+          }
+          break;
+        }
+      }
+    }
+
+    function handleMouseMove(event) {
+      const canvasRect = canvas.getBoundingClientRect();
+      mousePosRef.current = {
+        x: event.clientX - canvasRect.left,
+        y: event.clientY - canvasRect.top
+      };
+    }
+
+    canvas.addEventListener('click', handleMouseClick);
+    canvas.addEventListener('mousemove', handleMouseMove);
+
+    // Fetch images from subreddit
+    fetch('https://www.reddit.com/r/collegememes/.json?limit=50')
+      .then(response => response.json())
+      .then(data => {
+        const imagePosts = data.data.children.filter(
+          post => post.data.post_hint === 'image'
+        );
+        imagesRef.current = imagePosts.map(post => post.data.url);
+      })
+      .catch(error => console.error(error));
+
+    // Animation loop
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      updateParticles();
+      drawParticles();
+
+      if (activeParticlesRef.current.length > 0) {
+        // Draw active particles with memes
+        for (let i = 0; i < activeParticlesRef.current.length; i++) {
+          const particle = activeParticlesRef.current[i];
+
+          // Draw the particle
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particleRadius, 0, 2 * Math.PI);
+          ctx.fillStyle = particle.color;
+          ctx.fill();
+          ctx.closePath();
+
+          // Draw the meme image
+          if (particle.isMemeVisible && particle.memeUrl) {
+            const img = new Image();
+            img.src = particle.memeUrl;
+            const centerX = canvas.width / 2 - img.width / 2;
+            const centerY = canvas.height / 2 - img.height / 2;
+            ctx.drawImage(img, centerX, centerY, img.width, img.height);
+          }
+        }
+      }
+
+      // Change cursor style when hovering over particles
+      for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
+        const dx = mousePosRef.current.x - particle.x;
+        const dy = mousePosRef.current.y - particle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance <= particleRadius) {
+          canvas.style.cursor = 'pointer';
+          break;
+        } else {
+          canvas.style.cursor = 'default';
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return () => {
+      canvas.removeEventListener('click', handleMouseClick);
+      canvas.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
-  return (
-    <div>
-      <canvas id="galaxy"></canvas>
-      <div id="image-container"></div>
-    </div>
-  );
+  return <canvas ref={canvasRef} id="galaxy" />;
 }
 
 export default DataArt;

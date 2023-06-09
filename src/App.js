@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar'
 import { Route, Routes} from 'react-router-dom';
@@ -33,7 +32,8 @@ function App() {
      <Route exact path ='/StyleGuide' element={<StyleGuide/>}/>
      <Route exact path ='/IxDProcess' element={<IxDProcess/>}/>
      <Route exact path ='/DataArt' element={<DataArt/>}/>
-     <Route exact path="/BlogHome" element={<BlogHome/>} />
+     <Route exact path="/BlogHome" element={<BlogHome/>} />  
+
 
 
 
