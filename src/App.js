@@ -1,53 +1,38 @@
+import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar'
-import { Route, Routes} from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
-import Footer from './Components/footer';
+import Footer from './Components/Footer';
 import DesignSection from './Pages/DesignSection';
 import Wireframe from './Pages/Wireframe';
-import StyleGuide from './Pages/styleGuide';
+import StyleGuide from './Pages/StyleGuide';
 import IxDProcess from './Pages/IxDProcess';
 import DataArt from './Pages/DataArt';
-import BlogHome from './Pages/blogHome';
+import BlogHome from './Pages/BlogHome';
 import BlogContent from './Pages/BlogContent';
 import BlogPage from './Pages/BlogPage';
 
-
-
-
-
-
-
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <div className = "content">
-    <Routes>
-    <Route exact path ='/' element={<Home/>}/>
-    <Route exact path="/Blog" element={<BlogHome/>} />
-    <Route path="/blog/posts/:id" element={<BlogPage posts={BlogContent} />} />
-     <Route exact path ='/DesignSection' element={<DesignSection/>}/>
-     <Route exact path ='/Wireframe' element={<Wireframe/>}/>
-     <Route exact path ='/StyleGuide' element={<StyleGuide/>}/>
-     <Route exact path ='/IxDProcess' element={<IxDProcess/>}/>
-     <Route exact path ='/DataArt' element={<DataArt/>}/>
-     <Route exact path="/BlogHome" element={<BlogHome/>} />  
-
-
-
-
-
-
-
-
-
-
-    </Routes>
-    </div>
-    <Footer/>
-    </div>
-    
+    <Router basename="/React-website">
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Blog" element={<BlogHome />} />
+            <Route path="/blog/posts/:id" element={<BlogPage posts={BlogContent} />} />
+            <Route path="/DesignSection" element={<DesignSection />} />
+            <Route path="/Wireframe" element={<Wireframe />} />
+            <Route path="/StyleGuide" element={<StyleGuide />} />
+            <Route path="/IxDProcess" element={<IxDProcess />} />
+            <Route path="/DataArt" element={<DataArt />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
