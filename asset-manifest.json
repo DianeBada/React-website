@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-website/static/css/main.3c1e9741.css",
-    "main.js": "/React-website/static/js/main.fb25cb4e.js",
+    "main.js": "/React-website/static/js/main.2808d6a6.js",
     "static/js/787.b8934e54.chunk.js": "/React-website/static/js/787.b8934e54.chunk.js",
     "static/media/IM Front Page Pic.png": "/React-website/static/media/IM Front Page Pic.e96d3b094323504becd9.png",
     "static/media/blogImg.png": "/React-website/static/media/blogImg.8322618577728e012060.png",
@@ -16,11 +16,11 @@
     "static/media/Screenshot (227).png": "/React-website/static/media/Screenshot (227).da512879ade6688b11f9.png",
     "index.html": "/React-website/index.html",
     "main.3c1e9741.css.map": "/React-website/static/css/main.3c1e9741.css.map",
-    "main.fb25cb4e.js.map": "/React-website/static/js/main.fb25cb4e.js.map",
+    "main.2808d6a6.js.map": "/React-website/static/js/main.2808d6a6.js.map",
     "787.b8934e54.chunk.js.map": "/React-website/static/js/787.b8934e54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c1e9741.css",
-    "static/js/main.fb25cb4e.js"
+    "static/js/main.2808d6a6.js"
   ]
 }
