@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c1076b3.css",
-    "main.js": "/static/js/main.2b491518.js",
-    "static/js/787.b8934e54.chunk.js": "/static/js/787.b8934e54.chunk.js",
-    "static/media/IM Front Page Pic.png": "/static/media/IM Front Page Pic.e96d3b094323504becd9.png",
-    "static/media/blogImg.png": "/static/media/blogImg.8322618577728e012060.png",
-    "static/media/Website Art 4.png": "/static/media/Website Art 4.cf268ceceb2fbbb7e2b2.png",
-    "static/media/Author.jpg": "/static/media/Author.e75497ec971b19f1721e.jpg",
-    "static/media/MemesWire.png": "/static/media/MemesWire.82390d2acea395c84289.png",
-    "static/media/HomeWire.PNG": "/static/media/HomeWire.d8637a769dd028431cdc.PNG",
-    "static/media/blogsWire.png": "/static/media/blogsWire.144a8188d37e2807b6ba.png",
-    "static/media/userFlow.png": "/static/media/userFlow.a6d80cfe3e6cd3720b09.png",
-    "static/media/IntroInternet.png": "/static/media/IntroInternet.79f02ab9a1082b58d59f.png",
-    "static/media/Screenshot (228).png": "/static/media/Screenshot (228).3dede404ca07a09adf34.png",
-    "static/media/Screenshot (227).png": "/static/media/Screenshot (227).da512879ade6688b11f9.png",
-    "index.html": "/index.html",
-    "main.7c1076b3.css.map": "/static/css/main.7c1076b3.css.map",
-    "main.2b491518.js.map": "/static/js/main.2b491518.js.map",
-    "787.b8934e54.chunk.js.map": "/static/js/787.b8934e54.chunk.js.map"
+    "main.css": "/React-website/static/css/main.3c1e9741.css",
+    "main.js": "/React-website/static/js/main.fb25cb4e.js",
+    "static/js/787.b8934e54.chunk.js": "/React-website/static/js/787.b8934e54.chunk.js",
+    "static/media/IM Front Page Pic.png": "/React-website/static/media/IM Front Page Pic.e96d3b094323504becd9.png",
+    "static/media/blogImg.png": "/React-website/static/media/blogImg.8322618577728e012060.png",
+    "static/media/Website Art 4.png": "/React-website/static/media/Website Art 4.cf268ceceb2fbbb7e2b2.png",
+    "static/media/Author.jpg": "/React-website/static/media/Author.e75497ec971b19f1721e.jpg",
+    "static/media/MemesWire.png": "/React-website/static/media/MemesWire.82390d2acea395c84289.png",
+    "static/media/HomeWire.PNG": "/React-website/static/media/HomeWire.d8637a769dd028431cdc.PNG",
+    "static/media/blogsWire.png": "/React-website/static/media/blogsWire.144a8188d37e2807b6ba.png",
+    "static/media/userFlow.png": "/React-website/static/media/userFlow.a6d80cfe3e6cd3720b09.png",
+    "static/media/IntroInternet.png": "/React-website/static/media/IntroInternet.79f02ab9a1082b58d59f.png",
+    "static/media/Screenshot (228).png": "/React-website/static/media/Screenshot (228).3dede404ca07a09adf34.png",
+    "static/media/Screenshot (227).png": "/React-website/static/media/Screenshot (227).da512879ade6688b11f9.png",
+    "index.html": "/React-website/index.html",
+    "main.3c1e9741.css.map": "/React-website/static/css/main.3c1e9741.css.map",
+    "main.fb25cb4e.js.map": "/React-website/static/js/main.fb25cb4e.js.map",
+    "787.b8934e54.chunk.js.map": "/React-website/static/js/787.b8934e54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c1076b3.css",
-    "static/js/main.2b491518.js"
+    "static/css/main.3c1e9741.css",
+    "static/js/main.fb25cb4e.js"
   ]
 }
