@@ -110,38 +110,43 @@ function DataArt() {
               img.onload = () => {
                 let imgWidth = img.width;
                 let imgHeight = img.height;
-
-                // Check if image size exceeds canvas size
-                if (imgWidth > canvas.width || imgHeight > canvas.height) {
+              
+                // Calculate the offset dimensions
+                const canvasOffsetWidth = canvas.width - 10;
+                const canvasOffsetHeight = canvas.height - 10;
+              
+                // Check if image size exceeds canvas size with offset
+                if (imgWidth > canvasOffsetWidth || imgHeight > canvasOffsetHeight) {
                   const aspectRatio = imgWidth / imgHeight;
-
-                  // Reduce image size proportionally to fit within the canvas
-                  if (imgWidth > canvas.width) {
-                    imgWidth = canvas.width;
+              
+                  // Reduce image size proportionally to fit within the canvas with offset
+                  if (imgWidth > canvasOffsetWidth) {
+                    imgWidth = canvasOffsetWidth;
                     imgHeight = imgWidth / aspectRatio;
                   }
-                  if (imgHeight > canvas.height) {
-                    imgHeight = canvas.height;
+                  if (imgHeight > canvasOffsetHeight) {
+                    imgHeight = canvasOffsetHeight;
                     imgWidth = imgHeight * aspectRatio;
                   }
                 }
-
+              
+                // Calculate the position to draw the image
+                let centerX = canvas.width / 2 - imgWidth / 2;
+                let centerY = canvas.height / 2 - imgHeight / 2;
+              
                 // Draw the image on the canvas
-                const centerX = canvas.width / 2 - imgWidth / 2;
-                const centerY = canvas.height / 2 - imgHeight / 2;
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
-
+              
                 // Reset particle visibility after 4 seconds
                 setTimeout(() => {
                   particle.isMemeVisible = false;
                   particle.memeUrl = null;
-                  activeParticlesRef.current = activeParticlesRef.current.filter(
-                    p => p !== particle
-                  );
+                  activeParticlesRef.current = activeParticlesRef.current.filter(p => p !== particle);
                   drawParticles();
                 }, 4000);
               };
+              
             }
           }
           break;
