@@ -1,21 +1,20 @@
-import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
-import Footer from './Components/Footer';
+import Footer from './Components/footer';
 import DesignSection from './Pages/DesignSection';
 import Wireframe from './Pages/Wireframe';
-import StyleGuide from './Pages/StyleGuide';
+import StyleGuide from './Pages/styleGuide';
 import IxDProcess from './Pages/IxDProcess';
 import DataArt from './Pages/DataArt';
-import BlogHome from './Pages/BlogHome';
+import BlogHome from './Pages/blogHome';
 import BlogContent from './Pages/BlogContent';
 import BlogPage from './Pages/BlogPage';
 
 function App() {
   return (
-    <Router basename="/React-website">
+    <Router>
       <div className="App">
         <Navbar />
         <div className="content">
@@ -28,6 +27,7 @@ function App() {
             <Route path="/StyleGuide" element={<StyleGuide />} />
             <Route path="/IxDProcess" element={<IxDProcess />} />
             <Route path="/DataArt" element={<DataArt />} />
+            <Route path="/BlogHome" element={<BlogHome />} />
           </Routes>
         </div>
         <Footer />
