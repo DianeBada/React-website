@@ -24,6 +24,12 @@ import CodeArt from './Week/CodeArt';
 import AIndArt from './Week/AIndArt';
 import AfricanArt from './Week/AfricanArt';
 import WeekUIUX from './Week/WeekUIUX';
+import Week11 from './Week/week11';
+import Week12 from './Week/week12';
+import Week13 from './Week/week13';
+import Week14 from './Week/week14';
+
+
 
 
 
@@ -57,6 +63,14 @@ function App() {
             <Route path="/CodeArt" element={<CodeArt />} />
             <Route path="/AfricanArt" element={<AfricanArt />} />
             <Route path="/AIndArt" element={<AIndArt />} />
+            <Route path="/week11" element={<Week11 />} />       
+                 <Route path="/week12" element={<Week12 />} />
+                 <Route path="/week13" element={<Week13 />} />
+                 <Route path="/week14" element={<Week14 />} />
+
+
+
+
 
 
 

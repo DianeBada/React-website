@@ -147,15 +147,39 @@ const blogContent = [
     link : '/AIndArt'
 
   },
+
+  {
+    id:16 ,
+    title: 'Week 12 ',
+    category: 'Dev Blog',
+    date: '25 May 2023',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
+    author: 'Diane Bada',
+    image: image,
+    link : '/week12'
+
+  },
   {
     id:14 ,
     title: 'Week 13 - African Digital Art',
-    category: 'Dev Blog',
+    category: 'Theory',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
     author: 'Diane Bada',
     image: image,
     link : '/AfricanArt'
+
+  },
+
+  {
+    id:17 ,
+    title: 'Week 13 ',
+    category: 'Dev Blog',
+    date: '17 March 2023',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
+    author: 'Diane Bada',
+    image: image,
+    link : '/week13'
 
   },
 
@@ -167,7 +191,7 @@ const blogContent = [
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
     author: 'Diane Bada',
     image: image,
-    link : '/week13'
+    link : '/week14'
 
   },];
 
