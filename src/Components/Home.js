@@ -7,8 +7,8 @@ const Home = () => {
   const [clickedCount, setClickedCount] = useState(0);
   const [showIntroText, setShowIntroText] = useState(true);
 
-  const phrasesToShow = 60;
-  const maxWordsPerPhrase = 14;
+  const phrasesToShow = 70;
+  const maxWordsPerPhrase = 17;
 
   const getRandomPosition = () => {
     const x = Math.floor(Math.random() * (window.innerWidth - 200));
@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   const getRedditPosts = async (subreddit, sorting) => {
-    const url = `https://www.reddit.com/r/${subreddit}/${sorting}.json`;
+    const url = `https://www.reddit.com/r/${subreddit}/top.json?limit=${phrasesToShow}`;
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -41,7 +41,7 @@ const Home = () => {
   };
 
   const addPhrases = async () => {
-    const phrases = await getRedditPosts('college', 'top');
+    const phrases = await getRedditPosts('CollegeRant');
     const numPhrasesToShow = Math.min(phrases.length, phrasesToShow);
     const newPhrases = [];
 
