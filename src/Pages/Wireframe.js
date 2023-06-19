@@ -32,7 +32,7 @@ const Wireframe = () => {
   }, []);
 
   return (
-    <div>
+    <div className = "wireframe-home-container">
       <section className="hp_wireframe_container swiper">
         <h1>DESIGN</h1>
         <h2>WIREFRAME</h2>

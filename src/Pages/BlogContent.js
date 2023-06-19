@@ -184,7 +184,7 @@ const blogContent = [
   },
 
   {
-    id:14 ,
+    id:18 ,
     title: 'Week 14 - Mini Reflection ',
     category: 'Dev Blog',
     date: '07 June 2023',

@@ -1,50 +1,55 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../Styles/Home.css';
+import '../Styles/Glitch.css';
 
-const Home = () => {
+const Home = ({ screenRef }) => {
   const [phrases, setPhrases] = useState([]);
   const [opacity, setOpacity] = useState(0.001);
   const [clickedCount, setClickedCount] = useState(0);
   const [showIntroText, setShowIntroText] = useState(true);
 
-  const phrasesToShow = 70;
-  const maxWordsPerPhrase = 17;
+  const phrasesToShow = 30;
+  const maxWordsPerPhrase = 40;
+  const phrasesContainerRef = useRef(null); // Ref for phrases container
 
   const getRandomPosition = () => {
-    const x = Math.floor(Math.random() * (window.innerWidth - 200));
-    const y = Math.floor(Math.random() * (window.innerHeight - 50));
+    const container = screenRef.current;
+    const containerRect = container.getBoundingClientRect();
+  
+    const x = Math.floor(Math.random() * containerRect.width);
+    const y = Math.floor(Math.random() * containerRect.height);
     return { x, y };
   };
-
   const getRandomVelocity = () => {
-    const speed = Math.floor(Math.random() * 3) + 3;
+    const speed = Math.floor(Math.random() * 1.5) + 1.5;
     const angle = Math.random() * Math.PI * 2;
     const vx = Math.cos(angle) * speed;
     const vy = Math.sin(angle) * speed;
     return { vx, vy };
   };
 
-  const getRedditPosts = async (subreddit, sorting) => {
-    const url = `https://www.reddit.com/r/${subreddit}/top.json?limit=${phrasesToShow}`;
+  const getRedditPosts = async (subreddit) => {
+    const url = `https://www.reddit.com/r/${subreddit}.json?limit=${phrasesToShow}`;
     try {
       const response = await fetch(url);
       const data = await response.json();
-      const titles = data.data.children.map((child) => child.data.title);
-      const filteredTitles = titles.filter(
-        (title) => title.split(' ').length <= maxWordsPerPhrase
+      const posts = data.data.children.map((child) => child.data.title);
+      const filteredPosts = posts.filter(
+        (post) => post.split(' ').length <= maxWordsPerPhrase
       );
-      return filteredTitles;
+      return filteredPosts;
     } catch (error) {
       console.error(`Error fetching Reddit posts: ${error}`);
       return [];
     }
   };
+  
 
   const addPhrases = async () => {
-    const phrases = await getRedditPosts('CollegeRant');
+    const phrases = await getRedditPosts('youngadults');
     const numPhrasesToShow = Math.min(phrases.length, phrasesToShow);
     const newPhrases = [];
-
+  
     for (let i = 0; i < numPhrasesToShow; i++) {
       const position = getRandomPosition();
       const velocity = getRandomVelocity();
@@ -63,10 +68,6 @@ const Home = () => {
     setPhrases(newPhrases);
   };
 
-  useEffect(() => {
-    addPhrases();
-  }, []);
-
   const handlePhraseClick = () => {
     setClickedCount((prevClickedCount) => prevClickedCount + 1);
     setShowIntroText(false);
@@ -79,30 +80,50 @@ const Home = () => {
         const vy = phrase.vy;
         const x = phrase.x;
         const y = phrase.y;
-
+  
         let newX = x + vx;
         let newY = y + vy;
-
-        if (newX < 0 || newX > window.innerWidth - 200) {
-          phrase.vx = -vx;
-          newX = x - vx;
+  
+        // Get the dimensions of the phrases container
+        const container = screenRef.current;
+        const containerRect = container.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+  
+        // Define the bounce distance from the bottom of the screen div
+        const bounceDistance = 140; // Adjust this value as needed
+  
+        // Check if the phrase has reached or exceeded the edges of the container
+        if (newX <= 0 || newX >= containerWidth - 200) {
+          phrase.vx = -vx; // Reverse the horizontal velocity
+          newX = x + phrase.vx; // Update the new x position
         }
-
-        if (newY < 0 || newY > window.innerHeight - 50) {
-          phrase.vy = -vy;
-          newY = y - vy;
+  
+        // Check if the phrase has reached the top or bottom edges of the container
+        if (newY <= 0 || newY >= containerHeight - bounceDistance) {
+          phrase.vy = -vy; // Reverse the vertical velocity
+          newY = y + phrase.vy; // Update the new y position
+  
+          // Adjust the new y position to stay within the container bounds
+          if (newY <= 0) {
+            newY = 0;
+          } else if (newY >= containerHeight - bounceDistance) {
+            newY = containerHeight - bounceDistance;
+          }
         }
-
+  
         return {
           ...phrase,
           x: newX,
           y: newY,
         };
       });
-
+  
       return updatedPhrases;
     });
   };
+  
+  
 
   const updateVisibility = () => {
     const opacityFactor = 0.005;
@@ -118,27 +139,31 @@ const Home = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [phrases]);
 
   useEffect(() => {
     updateVisibility();
   }, [clickedCount]);
 
+  useEffect(() => {
+    addPhrases();
+  }, []);
+
   const renderPhrases = () => {
     return phrases.map((phrase, index) => (
       <div
-        key={index}
-        className="phrase"
-        style={{ left: `${phrase.x}px`, top: `${phrase.y}px` }}
-        onClick={handlePhraseClick}
-      >
+      key={index}
+      className="phrase"
+      style={{ left: `${phrase.x}px`, top: `${phrase.y}px`, fontSize: '12px' }}
+      onClick={handlePhraseClick}
+    >
         {phrase.title}
       </div>
     ));
   };
 
   return (
-    <div>
+    <div className="home-container" ref={phrasesContainerRef}>
       {showIntroText && (
         <div className="intro-text" onClick={handlePhraseClick}>
           <h1 className="intro-title">Click the phrases</h1>
@@ -150,7 +175,6 @@ const Home = () => {
       <section className="hero" style={{ opacity }}>
         <h1 className="title1">Beauty in</h1>
         <h1 className="title2">Student Chaos</h1>
-        <div className="background"></div>
       </section>
       <div className="phrases-container">{renderPhrases()}</div>
     </div>

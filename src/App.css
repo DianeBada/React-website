@@ -1,11 +1,182 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+.mac-desktop {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/study.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  perspective: 1000px; /* Adds 3D perspective */
+}
 
+.macbook-container {
+  width: 80%;
+  height: 80%;
+  transform-style: preserve-3d; /* Ensures child elements preserve 3D transformations */
+}
 
+.macbook {
+  position: relative;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #792828;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+    overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
 
+.screen {
+  position: relative;
+  width: 100%;
+  height: 82.5vh;
+  background: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;  overflow: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
 
+}
 
+.stand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 100px; /* Adjust the height of the stand */
+  background-color: silver; /* Set the desired color for the stand */
+  border-radius: 20px; /* Adjust the border radius for the rounded edges */
+}
 
+.aluminum-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Adjust the height of the aluminum body */
+  background-color: silver; /* Set the desired color for the aluminum body */
+  border-radius: 0 0 20px 20px; /* Adjust the border radius for the rounded bottom edges */
+}
+
+.webcam {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 20px;
+  background: #0c0b0b; /* Webcam color */
+  border-radius: 5px;
+}
+
+@media (min-width: 1281px) {
+  .macbook {
+    width: 100%;
+  }
+
+  .aluminum-body {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1441px) {
+  .macbook {
+    width: 100%;
+  }
+
+  .aluminum-body {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1601px) {
+  .macbook {
+    width: 100%;
+  }
+}
+
+@media (min-height: 800px) and (min-width: 1025px) {
+  .screen {
+    padding-top: 56.25%;
+    padding-bottom: 43.75%;
+  }
+  .aluminum-body {
+    width: 80%;
+  }
+}
+
+@media (min-height: 1000px) and (min-width: 1178px) {
+  .screen {
+    padding-top: 100%;
+    padding-bottom: 120%;
+  }
+}
+
+@media (min-height: 1179px) {
+  .screen {
+    padding-top: 100%;
+    padding-bottom: 85%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .macbook-container {
+    width: 85%;
+  }
+
+  .aluminum-body {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media (max-width: 799px) {
+  .macbook-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .macbook-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .macbook {
+    border-radius: 15px;
+  }
+
+  .aluminum-body {
+    border-radius: 0 0 15px 15px;
+  }
+
+  .stand {
+    border-radius: 15px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .aluminum-body{
+  margin-left: 5%;
+    width: 90%; /* Set the width to 100% to fit within the screen */
+  }
+}
 

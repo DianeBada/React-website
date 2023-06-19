@@ -6,7 +6,7 @@ import '../Styles/styleguide.css'
 
 function StyleGuide() {
   return (
-    <div>
+    <div className = "styleguide-home-container">
       <h1 className="style-title">Style Guide</h1>
 
       <section className="style-container">

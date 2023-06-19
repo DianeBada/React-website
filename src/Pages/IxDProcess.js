@@ -9,10 +9,10 @@ import userFlow from '../images/userFlow.png';
 
 function IxDProcess() {
   return (
-    <div>
-      <h1 class = "style-title">IxD Process</h1>
+    <div className = "IxD-home-container">
+      <h1 className = "style-title">IxD Process</h1>
 
-<section class = "style-container">
+<section className = "style-container">
 <p>This is the interactive design process of my website.</p>
 <h2>Goal Alignment</h2>
 <p>The goal of "The Beauty Behind Student Chaos" website is to provide a platform for students to view themselves through memes and artwork. The website aims to create a community of students who can share their experiences of the chaos that university and college life brings, and find solace in the relatability of others' experiences.</p>
@@ -21,7 +21,7 @@ function IxDProcess() {
 
 <h2>User Flow</h2>
 <p>The user flow states the behaviour and decisions carried about by the user of the site</p>
-<img src={userFlow} alt="image of user flow " class="meme"/>
+<img src={userFlow} alt="image of user flow " className="meme"/>
 
 <h2>Visual Aesthetic</h2>
 <p>The visual aesthetic of the website "Beauty Behind the Students' Chaos" is vibrant and engaging, with a bold use of bright colours that immediately capture the user's attention. The colourful background and other visual elements throughout the site create a dynamic and lively atmosphere that reflects the youthful and creative energy of the student community.

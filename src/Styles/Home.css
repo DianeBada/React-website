@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
 
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
 
-body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin: 0;
-  padding: 0;
+
+.home-container {
+  position: relative; /* Set the positioning to relative */
+  width: 100%; /* Set the width to occupy the entire screen */
+  height: 100vh; /* Set the height to occupy the full viewport height */
+  overflow: hidden; /* Hide any overflow content */
 }
 
 .hero {
@@ -42,6 +39,15 @@ body {
   height: 60%;
   padding: 50px;
   cursor: pointer;
+}
+
+.title1{
+  z-index: 3;
+  position: relative;
+}
+.title2{
+  z-index: 3;
+  position: relative;
 }
 
 .background-color {
@@ -95,11 +101,17 @@ body {
   animation-iteration-count: infinite;
 }
 .intro-title {
-  color: #ff0000; /* Replace with your desired color */
+  color: #ff0000; 
+  z-index: 3;
+  position: relative;
 }
 
 .intro-description {
-  color: #580303; /* Replace with your desired color */
+  color: #ff0000; 
+  z-index: 3;
+  position: relative;
+  margin-left: 2%;
+  text-emphasis: bold;
 
 }
 
@@ -158,6 +170,8 @@ body {
 
 .phrase {
   animation: pop-in-out 5s infinite;
+  text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+
 }
 
 @keyframes glitch {
@@ -243,4 +257,60 @@ body {
   width: 200%;
   height: 200%;
   opacity: 1;
+}
+@media only screen and (max-width: 1200px) {
+  .title-1 {
+    font-size: 20px;
+  }
+  
+  .title-2 {
+    font-size: 18px;
+  }
+  
+  .intro-title {
+    font-size: 25px;
+    margin-top: 20%;
+  }
+  
+  .intro-description {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title-1 {
+    font-size: 18px;
+  }
+  
+  .title-2 {
+    font-size: 16px;
+  }
+  
+  .intro-title {
+    font-size: 14px;
+  }
+  
+  .intro-description {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title-1 {
+    font-size: 16px;
+  }
+  
+  .title-2 {
+    font-size: 14px;
+  }
+  
+  .intro-title {
+    font-size: 18px;
+    margin-top: 30%;
+
+  }
+  
+  .intro-description {
+    font-size: 15px;
+  }
 }
