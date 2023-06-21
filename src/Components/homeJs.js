@@ -1,117 +1,103 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import '../Styles/internet.css';
 
-const Home = () => {
-  const [phrases, setPhrases] = useState([]);
-  const [clickedIndex, setClickedIndex] = useState(-1);
+const InternetArt = () => {
+  const [messages, setMessages] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+  const [activeTab, setActiveTab] = useState('chaos');
 
-  const maxWordsPerPhrase = 14;
-  const phrasesToShow = 60;
+  useEffect(() => {
+    if (activeTab === 'chaos') {
+      fetchRedditPosts('youngadults');
+    }
+  }, [activeTab]);
 
-  const getRandomPosition = () => {
-    const x = Math.floor(Math.random() * (window.innerWidth - 200));
-    const y = Math.floor(Math.random() * (window.innerHeight - 50));
-    return { x, y };
-  };
-
-  const getRandomVelocity = () => {
-    const speed = Math.floor(Math.random() * 1.5) + 1.5; // Decreased speed
-    const angle = Math.random() * Math.PI * 2;
-    const vx = Math.cos(angle) * speed;
-    const vy = Math.sin(angle) * speed;
-    return { vx, vy };
-  };
-
-  const getRedditPosts = async (subreddit, sorting) => {
-    const url = `https://www.reddit.com/r/${subreddit}/${sorting}.json`;
+  const fetchRedditPosts = async (subreddit) => {
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const titles = data.data.children.map((child) => child.data.title);
-      const filteredTitles = titles.filter((title) => title.split(' ').length <= maxWordsPerPhrase);
-      setPhrases(filteredTitles);
+      const response = await axios.get(
+        `https://www.reddit.com/r/${subreddit}/.json?limit=30`
+      );
+
+      const posts = response.data.data.children.map((post) => ({
+        id: post.data.id,
+        author: post.data.author,
+        message: post.data.title,
+      }));
+
+      setMessages(posts);
     } catch (error) {
-      console.error(`Error fetching Reddit posts: ${error}`);
-      setPhrases([]);
+      console.error(error);
     }
   };
 
-  const handlePhraseClick = (index) => {
-    setClickedIndex(index);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (inputValue.trim() !== '') {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { id: Date.now(), message: inputValue },
+      ]);
+      setInputValue('');
+    }
   };
 
-  useEffect(() => {
-    const addPhrases = async () => {
-      await getRedditPosts('college', 'top');
-    };
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
 
-    addPhrases();
-  }, []);
-
-  useEffect(() => {
-    const updatePhrases = () => {
-      const phraseElements = document.querySelectorAll('.phrase');
-      phraseElements.forEach((phraseElement) => {
-        const vx = Number(phraseElement.dataset.vx);
-        const vy = Number(phraseElement.dataset.vy);
-        const x = Number(phraseElement.style.left.replace('px', ''));
-        const y = Number(phraseElement.style.top.replace('px', ''));
-    
-        let newX = x + vx;
-        let newY = y + vy;
-    
-        if (newX < 0 || newX > window.innerWidth - 200) {
-          phraseElement.dataset.vx = -vx;
-          newX = x - vx;
-        }
-    
-        if (newY < 0 || newY > window.innerHeight - 50) {
-          phraseElement.dataset.vy = -vy;
-          newY = y - vy;
-        }
-    
-        phraseElement.style.left = `${newX}px`;
-        phraseElement.style.top = `${newY}px`;
-      });
-    };
-    
-
-    const intervalId = setInterval(updatePhrases, 50);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  const renderPhrases = () => {
-    return phrases.slice(0, phrasesToShow).map((phrase, index) => {
-      const position = getRandomPosition();
-      const velocity = getRandomVelocity();
-
-      if (index === clickedIndex) {
-        return null; // Skip rendering the clicked phrase
-      }
-      const phraseClass = `phrase ${clickedIndex === index ? 'visible' : ''} flying`;
-
-      return (
-        <div
-          key={index}
-          className="phrase"
-          style={{
-            left: `${position.x}px`,
-            top: `${position.y}px`,
-            transform: `translate(${velocity.vx}px, ${velocity.vy}px)`,
-          }}
-          data-vx={velocity.vx}
-          data-vy={velocity.vy}
-          onClick={() => handlePhraseClick(index)}
+  return (
+    <div>
+      <div className="tabs">
+        <button
+          className={activeTab === 'chaos' ? 'active' : ''}
+          onClick={() => handleTabChange('chaos')}
         >
-          {phrase.split(' ').slice(0, maxWordsPerPhrase).join(' ')}
-        </div>
-      );
-    });
-  };
+          Chaos
+        </button>
+        <button
+          className={activeTab === 'beauty' ? 'active' : ''}
+          onClick={() => handleTabChange('beauty')}
+        >
+          Beauty
+        </button>
+      </div>
 
-  return <div className="phrases-container">{renderPhrases()}</div>;
+      {activeTab === 'chaos' && (
+        <div className="chat-area">
+          {messages.map((message) => (
+            <div key={message.id} className="message">
+              <div className="message-container">
+                <p className="author">{message.author}</p>
+                <p className="content">{message.message}</p>
+              </div>
+              <div className="reaction-buttons">
+                <button>Like</button>
+                <button>Dislike</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {activeTab === 'beauty' && (
+        <div className="image-area">
+          {/* Add your code here to retrieve and display images */}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  );
 };
 
-export default Home;
+export default InternetArt;

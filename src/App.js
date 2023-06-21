@@ -29,6 +29,8 @@ import Week11 from './Week/week11';
 import Week12 from './Week/week12';
 import Week13 from './Week/week13';
 import Week14 from './Week/week14';
+import Internet from './Components/IternetArt';
+import Form from './Components/Form';
 
 function App() {
   const screenRef = useRef(null);
@@ -57,6 +59,11 @@ function App() {
               <Route exact path ='/Wireframe' element={<Wireframe/>}/>
               <Route exact path ='/StyleGuide' element={<StyleGuide/>}/>
               <Route exact path ='/IxDProcess' element={<IxDProcess/>}/>
+              <Route exact path ='/Internet' element={<Internet/>}/>
+              <Route exact path ='/Form' element={<Form/>}/>
+
+
+
 
               </Routes>
               <Footer />

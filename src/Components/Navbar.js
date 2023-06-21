@@ -29,14 +29,14 @@ class Navbar extends Component {
             <Link to="/">Home</Link>
             <Link to="/Blog">Blog</Link>
             <Link to="/DesignSection">Design Section</Link>
-            <Link to="/DataArt">Internet Art</Link>
+            <Link to="/Internet">Internet Art</Link>
           </section>
         </section>
         <ul className="navLinks">
           <Link to="/">Home</Link>
           <Link to="/Blog">Blog</Link>
           <Link to="/DesignSection">Design Section</Link>
-          <Link to="/DataArt">Internet Art</Link>
+          <Link to="/Internet">Internet Art</Link>
         </ul>
       </nav>
     );
