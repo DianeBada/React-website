@@ -60,7 +60,6 @@ function App() {
               <Route exact path ='/StyleGuide' element={<StyleGuide/>}/>
               <Route exact path ='/IxDProcess' element={<IxDProcess/>}/>
               <Route exact path ='/Internet' element={<Internet/>}/>
-              <Route exact path ='/Form' element={<Form/>}/>
 
 
 
