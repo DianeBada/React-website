@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Week7() {
   return (
     <div>
-      <h1>Week 7</h1>
+      <h1>The Pursuit of Something New</h1>
       <p className="date">Posted on April 18, 2023</p>
       <main>
         <section className="blog-content">

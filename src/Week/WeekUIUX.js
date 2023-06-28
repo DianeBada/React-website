@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function WeekUIUX() {
   return (
-    <div>
+    <section>
       <h1>Critical Reflection on my UI and UX</h1>
       <p className="date">Posted on April 18, 2023</p>
       <main>
@@ -39,7 +39,7 @@ function WeekUIUX() {
             </Link>       
              </section>
       </main>
-    </div>
+    </section>
   );
 }
 

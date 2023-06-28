@@ -2,10 +2,16 @@
     text-align: center;
     margin-bottom: 4rem;
     margin-top: 13%;
-    height: 150vh;
+    height: 120vh;
+
     
   }
-  
+  .wireframe-home-container{
+
+    background-image: url("../images/Website\ Art\ 4.png");
+
+
+  }
   .hp_wireframe_container h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -34,7 +40,7 @@
   }
   
   .design-container {
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -58,7 +64,7 @@
 
   }
   .swiper-slide{
-    margin-bottom: 200px;
+    margin-bottom: 2px;
   }
   .swiper-slide img {
     max-width: 100%;

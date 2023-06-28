@@ -8,10 +8,7 @@ import DesignSection from './Pages/DesignSection';
 import Wireframe from './Pages/Wireframe';
 import StyleGuide from './Pages/styleGuide';
 import IxDProcess from './Pages/IxDProcess';
-import DataArt from './Pages/DataArt';
 import BlogHome from './Pages/blogHome';
-import BlogContent from './Pages/BlogContent';
-import BlogPage from './Pages/BlogPage';
 import Week3 from './Week/week3';
 import Week4 from './Week/week4';
 import Week4Theory from './Week/week4Theory';
@@ -30,7 +27,9 @@ import Week12 from './Week/week12';
 import Week13 from './Week/week13';
 import Week14 from './Week/week14';
 import Internet from './Components/IternetArt';
-import Form from './Components/Form';
+import RoadTo from './Week/RooadTo';
+import UIX from './Week/UIXTwo';
+import End from './Week/End';
 
 function App() {
   const screenRef = useRef(null);
@@ -60,6 +59,34 @@ function App() {
               <Route exact path ='/StyleGuide' element={<StyleGuide/>}/>
               <Route exact path ='/IxDProcess' element={<IxDProcess/>}/>
               <Route exact path ='/Internet' element={<Internet/>}/>
+              <Route exact path ='/week3' element={<Week3/>}/>
+              <Route exact path ='/week4' element={<Week4/>}/>
+              <Route exact path ='/week4Theory' element={<Week4Theory/>}/>
+              <Route exact path ='/week5' element={<Week5/>}/>
+              <Route exact path ='/week5Theory' element={<Week5Theory/>}/>
+              <Route exact path ='/week6' element={<Week6/>}/>
+              <Route exact path ='/week7' element={<Week7/>}/>
+              <Route exact path ='/week9' element={<Week9/>}/>
+              <Route exact path ='/week11' element={<Week11/>}/>
+              <Route exact path ='/week12' element={<Week12/>}/>
+              <Route exact path ='/week13' element={<Week13/>}/>
+              <Route exact path ='/week14' element={<Week14/>}/>
+              <Route exact path ='/WeekUIUX' element={<WeekUIUX/>}/>
+              <Route exact path ='/week9' element={<Week9/>}/>
+              <Route exact path ='/WeekReflection' element={<WeekReflection/>}/>
+              <Route exact path ='/AfricanArt' element={<AfricanArt/>}/>
+              <Route exact path ='/AIndArt' element={<AIndArt/>}/>
+              <Route exact path ='/CodeArt' element={<CodeArt/>}/>
+              <Route exact path ='/End' element={<End/>}/>
+              <Route exact path ='/UIXTwo' element={<UIX/>}/>
+              <Route exact path ='/RoadTo' element={<RoadTo/>}/>
+
+
+
+
+
+
+
 
 
 

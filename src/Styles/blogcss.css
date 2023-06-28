@@ -250,4 +250,7 @@ body{
   .blog-home-container {
     background: linear-gradient(to bottom right,black, grey, rgb(218, 30, 174), blue);
   }
+  .blog-home-container{
+    padding-bottom: 20px;
+  }
   

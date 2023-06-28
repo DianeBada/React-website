@@ -5,7 +5,7 @@ import image from '../images/img1.jpg';
 const blogContent = [
   {
     id: 1,
-    title: 'Week 3',
+    title: 'The Beauty and Chaos in Student Life: Intro to Internet Art',
     category: 'Theory',
     date: '15 March 2023',
     description: 'A reflection on week 3',
@@ -16,7 +16,7 @@ const blogContent = [
   },
   {
     id: 2,
-    title: 'Week 4',
+    title: 'Boundless Creativity',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -27,7 +27,7 @@ const blogContent = [
 
   {
     id: 3,
-    title: 'Week 4',
+    title: 'Context and Conventions - Creating Meaning on the web ',
     category: 'Theory',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -38,7 +38,7 @@ const blogContent = [
   },
   {
     id: 4,
-    title: 'Week 5',
+    title: 'Reddit, my love!',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -49,7 +49,7 @@ const blogContent = [
   },
   {
     id: 5,
-    title: 'Week 5Theory',
+    title: 'New Era of Art',
     category: 'Theory',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -60,7 +60,7 @@ const blogContent = [
   },
   {
     id:6 ,
-    title: 'Week 6',
+    title: 'Hey, its Memes!',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -71,7 +71,7 @@ const blogContent = [
   },
   {
     id:7 ,
-    title: 'Week 7',
+    title: 'The Pursuit of Something New.',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -82,7 +82,7 @@ const blogContent = [
   },
   {
     id:8 ,
-    title: 'Week 7 - Reflection',
+    title: 'Reflecting on my work so far..',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -93,7 +93,7 @@ const blogContent = [
   },
   {
     id:9 ,
-    title: 'Week 8 - UI & UX',
+    title: 'UI and UX. What about it?',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -105,7 +105,7 @@ const blogContent = [
   ,
   {
     id:10 ,
-    title: 'Week 9',
+    title: 'Hello there, React!',
     category: 'Dev Blog',
     date: '12 May 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -116,7 +116,7 @@ const blogContent = [
   },
   {
     id:11 ,
-    title: 'Week 10 - Code Art',
+    title: 'Code Art',
     category: 'Theory',
     date: '17 May 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -127,7 +127,7 @@ const blogContent = [
   },
   {
     id:12 ,
-    title: 'Week 11',
+    title: 'Stupid Props and State',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -138,7 +138,7 @@ const blogContent = [
   },
   {
     id:13 ,
-    title: 'Week 12 - AI and Art',
+    title: 'Introducing AI and Art',
     category: 'Theory',
     date: '25 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -150,7 +150,7 @@ const blogContent = [
 
   {
     id:16 ,
-    title: 'Week 12 ',
+    title: 'Light at the end of the Tunnel',
     category: 'Dev Blog',
     date: '25 May 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -161,7 +161,7 @@ const blogContent = [
   },
   {
     id:14 ,
-    title: 'Week 13 - African Digital Art',
+    title: 'African Digital Art',
     category: 'Theory',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -173,7 +173,7 @@ const blogContent = [
 
   {
     id:17 ,
-    title: 'Week 13 ',
+    title: 'Thouhgt Bubbles and Memes',
     category: 'Dev Blog',
     date: '17 March 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -185,7 +185,7 @@ const blogContent = [
 
   {
     id:18 ,
-    title: 'Week 14 - Mini Reflection ',
+    title: 'A little Reflection on my Progress thus far',
     category: 'Dev Blog',
     date: '07 June 2023',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
@@ -193,6 +193,39 @@ const blogContent = [
     image: image,
     link : '/week14'
 
-  },];
+  },
+
+{
+  id: 19,
+  title: 'Back to UI and UX',
+  category: 'Dev Blog',
+  date: '17 June 2023',
+  description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
+  author: 'Diane Bada',
+  image: image,
+  link : '/UIXTwo'
+},
+{
+id: 20,
+title: 'The Road to the finishing Line',
+category: 'Dev Blog',
+date: '20 June 2023',
+description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
+author: 'Diane Bada',
+image: image,
+link : '/RoadTo'
+},
+
+{
+  id: 21,
+  title: 'A short Story: The Digital Realm - A Nexus of Chaos and Beauty',
+  category: 'Dev Blog',
+  date: '27 June 2023',
+  description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit...',
+  author: 'Diane Bada',
+  image: image,
+  link : '/End'
+  },
+];
 
 export default blogContent;

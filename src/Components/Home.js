@@ -163,21 +163,21 @@ const Home = ({ screenRef }) => {
   };
 
   return (
-    <div className="home-container" ref={phrasesContainerRef}>
+    <main className="home-container" ref={phrasesContainerRef}>
       {showIntroText && (
-        <div className="intro-text" onClick={handlePhraseClick}>
+        <section className="intro-text" onClick={handlePhraseClick}>
           <h1 className="intro-title">Click the phrases</h1>
           <p className="intro-description">
             Discover the beauty behind the madness!
           </p>
-        </div>
+        </section>
       )}
       <section className="hero" style={{ opacity }}>
         <h1 className="title1">Beauty in</h1>
         <h1 className="title2">Student Chaos</h1>
       </section>
       <div className="phrases-container">{renderPhrases()}</div>
-    </div>
+    </main>
   );
 };
 

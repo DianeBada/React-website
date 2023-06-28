@@ -9,7 +9,7 @@ import userFlow from '../images/userFlow.png';
 
 function IxDProcess() {
   return (
-    <div className = "IxD-home-container">
+    <section className = "IxD-home-container">
       <h1 className = "style-title">IxD Process</h1>
 
 <section className = "style-container">
@@ -45,7 +45,7 @@ function IxDProcess() {
             </button>
             </Link>       
              </section>
-    </div>
+    </section>
   );
 }
 

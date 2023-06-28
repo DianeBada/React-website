@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function WeekThree() {
   return (
     <div>
-      <h1>Week 14 - Mini Reflection!</h1>
+      <h1>Mini Reflection!</h1>
       <p className="date">Posted on May 10, 2023</p>
       <main>
         <section className="blog-content">
@@ -26,7 +26,7 @@ function WeekThree() {
               <ArrowCircleLeftIcon/> Previous
             </button>
             </Link>          
-            <Link to = "/week14">
+            <Link to = "/UIXTwo">
             <button className="button button-right-bottom">
               Next <ArrowCircleRightIcon/>
             </button>
