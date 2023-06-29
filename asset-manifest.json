@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/React-website/static/css/main.6200c840.css",
-    "main.js": "/React-website/static/js/main.d228f527.js",
+    "main.css": "/React-website/static/css/main.163857fb.css",
+    "main.js": "/React-website/static/js/main.816dc37b.js",
     "static/js/787.b8934e54.chunk.js": "/React-website/static/js/787.b8934e54.chunk.js",
+    "static/media/website Art 1.png": "/React-website/static/media/website Art 1.10562b1f236c6040b177.png",
     "static/media/IM Front Page Pic.png": "/React-website/static/media/IM Front Page Pic.e96d3b094323504becd9.png",
     "static/media/blogImg.png": "/React-website/static/media/blogImg.8322618577728e012060.png",
     "static/media/Website Art 4.png": "/React-website/static/media/Website Art 4.cf268ceceb2fbbb7e2b2.png",
@@ -10,19 +11,22 @@
     "static/media/Author.jpg": "/React-website/static/media/Author.e75497ec971b19f1721e.jpg",
     "static/media/study.jpg": "/React-website/static/media/study.f5ff6f099034b4397bab.jpg",
     "static/media/MemesWire.png": "/React-website/static/media/MemesWire.82390d2acea395c84289.png",
+    "static/media/wireframe-monitor (1).png": "/React-website/static/media/wireframe-monitor (1).86b22afefafc11dded79.png",
     "static/media/HomeWire.PNG": "/React-website/static/media/HomeWire.d8637a769dd028431cdc.PNG",
     "static/media/blogsWire.png": "/React-website/static/media/blogsWire.144a8188d37e2807b6ba.png",
     "static/media/userFlow.png": "/React-website/static/media/userFlow.a6d80cfe3e6cd3720b09.png",
+    "static/media/beuaty-wirframe (1).png": "/React-website/static/media/beuaty-wirframe (1).f370cc1dd8950bcc236c.png",
     "static/media/IntroInternet.png": "/React-website/static/media/IntroInternet.79f02ab9a1082b58d59f.png",
+    "static/media/chaos-wireframe (1).png": "/React-website/static/media/chaos-wireframe (1).bb58eb317439e1a88da8.png",
     "static/media/Screenshot (228).png": "/React-website/static/media/Screenshot (228).3dede404ca07a09adf34.png",
     "static/media/Screenshot (227).png": "/React-website/static/media/Screenshot (227).da512879ade6688b11f9.png",
     "index.html": "/React-website/index.html",
-    "main.6200c840.css.map": "/React-website/static/css/main.6200c840.css.map",
-    "main.d228f527.js.map": "/React-website/static/js/main.d228f527.js.map",
+    "main.163857fb.css.map": "/React-website/static/css/main.163857fb.css.map",
+    "main.816dc37b.js.map": "/React-website/static/js/main.816dc37b.js.map",
     "787.b8934e54.chunk.js.map": "/React-website/static/js/787.b8934e54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6200c840.css",
-    "static/js/main.d228f527.js"
+    "static/css/main.163857fb.css",
+    "static/js/main.816dc37b.js"
   ]
 }
