@@ -59,17 +59,13 @@ const Wireframe = () => {
                     alt="an image showing wireframe of homepage"
                   />
                 </section>
-                <section className="swiper-slide">
-                  <img
-                    src={IntroTo}
-                    alt="an image showing wireframe of intro to internet"
-                  />
-                </section>
+               
                 <section className="swiper-slide">
                   <img
                     src={blogsWire}
                     alt="an image showing wireframe of blog page"
                   />
+                </section>
                
                 <section className="swiper-slide">
                   <img
@@ -90,7 +86,6 @@ const Wireframe = () => {
                   />
                 </section>
 
-                </section>
                 <section className="swiper-slide">
                   <img
                     src={beauty}
