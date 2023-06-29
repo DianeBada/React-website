@@ -157,3 +157,26 @@
   background-color: red;
   color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+
+  .tabs button {
+   margin-top: 40px;
+  }
+  
+}
+@media only screen and (min-width: 500px) {
+
+  .tabs button {
+   margin-top: 60px;
+  }
+  
+}
+
+@media only screen and (max-width: 350px) {
+
+  .tabs button {
+   margin-top: 90px;
+  }
+  
+}
