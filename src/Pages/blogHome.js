@@ -38,13 +38,13 @@ const BlogHome = () => {
   return (
     <div className="blog-home-container">
     <section className="home" id="home">
-        <div className="home-text container">
+        <section className="home-text container">
           <h2 className="home-title">Trend Blogger</h2>
           <span className="home-subtitle">Your source of great content</span>
-        </div>
+        </section>
       </section>
       <section className="about container" id="about">
-        <div className="contentBx">
+        <section className="contentBx">
           <h2 className="titleText">Catch up with a university student</h2>
           <p className="title-text">
             As a university student, the journey can be chaotic, stressful, and challenging. Yet, within that chaos, there is a certain beauty that exists. It is a beauty that emerges from the resilience, determination, and creativity of students who navigate through the ups and downs of academic life. This blog explores the beauty behind the chaos, delving into the unique experiences, perspectives, and insights that make the student journey so remarkable. Join me on this journey as we uncover the hidden beauty that lies behind the students' chaos.
@@ -52,12 +52,12 @@ const BlogHome = () => {
           <a href="#" className="btn2">
             Read more
           </a>
-        </div>
-        <div className="imgBx">
+        </section>
+        <section className="imgBx">
           <img src={myImage} alt="" className="fitBg" />
-        </div>
+        </section>
       </section>
-      <div className="post-filter container">
+      <section className="post-filter container">
         <span
           className={`filter-item ${activeFilter === 'all' ? 'active-filter' : ''}`}
           onClick={() => handleFilterClick('all')}
@@ -76,7 +76,7 @@ const BlogHome = () => {
         >
           Dev Blog
         </span>
-      </div>
+      </section>
       <BlogPage posts={filteredPosts} />
     </div>
   );

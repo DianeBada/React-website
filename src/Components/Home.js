@@ -176,7 +176,7 @@ const Home = ({ screenRef }) => {
         <h1 className="title1">Beauty in</h1>
         <h1 className="title2">Student Chaos</h1>
       </section>
-      <div className="phrases-container">{renderPhrases()}</div>
+      <section className="phrases-container">{renderPhrases()}</section>
     </main>
   );
 };

@@ -108,8 +108,8 @@ const InternetArt = () => {
   }, []);
 
   return (
-    <div>
-      <div className="tabs">
+    <section>
+      <article className="tabs">
         <button
           className={activeTab === 'chaos' ? 'active' : ''}
           onClick={() => handleTabChange('chaos')}
@@ -122,17 +122,17 @@ const InternetArt = () => {
         >
           Beauty
         </button>
-      </div>
+      </article>
 
       {activeTab === 'chaos' && (
-        <div className="chat-area">
+        <section className="chat-area">
           {messages.map((message) => (
-            <div key={message.id} className="message">
-              <div className="message-container">
+            <article key={message.id} className="message">
+              <section className="message-container">
                 <p className="author">{message.author}</p>
                 <p className="content">{message.message}</p>
-              </div>
-              <div className="reaction-buttons">
+              </section>
+              <section className="reaction-buttons">
                 <button
                   className={`like-button ${message.liked ? 'liked' : ''}`}
                   onClick={() => handleLike(message.id)}
@@ -145,16 +145,16 @@ const InternetArt = () => {
                 >
                   Dislike
                 </button>
-              </div>
-            </div>
+              </section>
+            </article>
           ))}
-        </div>
+        </section>
       )}
 
       {activeTab === 'beauty' && (
-        <div className="image-area">
+        <article className="image-area">
           {messages.map((message) => (
-            <div key={message.id} className="image-container">
+            <section key={message.id} className="image-container">
               <p className="image-author">{message.author}</p>
               <img
                 src={message.imageUrl}
@@ -166,7 +166,7 @@ const InternetArt = () => {
                   );
                 }}
               />
-              <div className="reaction-buttons">
+              <section className="reaction-buttons">
                 <button
                   className={`like-button ${message.liked ? 'liked' : ''}`}
                   onClick={() => handleLike(message.id)}
@@ -179,10 +179,10 @@ const InternetArt = () => {
                 >
                   Dislike
                 </button>
-              </div>
-            </div>
+              </section>
+            </section>
           ))}
-        </div>
+        </article>
       )}
 
       <form onSubmit={handleSubmit}>
@@ -194,7 +194,7 @@ const InternetArt = () => {
         />
         <button type="submit">Send</button>
       </form>
-    </div>
+    </section>
   );
 };
 

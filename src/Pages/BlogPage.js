@@ -8,7 +8,7 @@ const BlogPage = () => {
   return (
     <div className="post container">
       {blogContent.map((post) => (
-        <div className="post-box" key={post.id}>
+        <section className="post-box" key={post.id}>
           <img src={post.image} alt="" className="post-img" />
           <h2 className="category">{post.category}</h2>
           <Link to={post.link} className="post-title">
@@ -16,11 +16,11 @@ const BlogPage = () => {
           </Link>
           <span className="post-date">{post.date}</span>
           <p className="post-description">{post.description}</p>
-          <div className="profile">
+          <section className="profile">
             <img src={myImage} alt="" className="profile-img" />
             <span className="profile-name">{post.author}</span>
-          </div>
-        </div>
+          </section>
+        </section>
       ))}
     </div>
   );

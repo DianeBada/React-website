@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    margin-top: 10%;
+    margin-top: 4%;
   }
   
   .tabs button {
@@ -71,6 +71,7 @@
     background-color: #3e1919;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
   }
   
   .author {
@@ -85,6 +86,7 @@
   .reaction-buttons {
     display: flex;
     justify-content: flex-end;
+    margin-top: 0px;
   }
   
   .reaction-buttons button {
@@ -161,7 +163,7 @@
 @media only screen and (max-width: 1000px) {
 
   .tabs button {
-   margin-top: 40px;
+   margin-top: 30px;
   }
   
 }
@@ -180,3 +182,5 @@
   }
   
 }
+
+

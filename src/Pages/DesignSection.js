@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function DesignSection() {
   return (
-    <div className="design-section">
+    <section className="design-section">
       <section className="design-title-container">
         <h1 className="design-title">Welcome to My Design Section</h1>
         <p className="design-description">Explore the beauty and creativity behind the chaos of student design.</p>
@@ -21,7 +21,7 @@ function DesignSection() {
           <button className="button">IxD Process</button>
         </Link>
       </section>
-    </div>
+    </section>
   );
 }
 
