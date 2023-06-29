@@ -12,7 +12,7 @@ function Week4() {
       <p className="date">Posted on April 15, 2023</p>
       <main>
         <section className="blog-content">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Photo of a student studying" />
+          <img src="https://thumbs.dreamstime.com/b/artwork-depicts-dreamscape-filled-vivid-colors-surreal-imagery-fantastical-elements-transport-viewer-to-272928807.jpg" alt="Photo of a boundless creativity" />
           <p>As I delved deeper into the world of internet art, I found myself captivated by the endless possibilities and the boundless creativity that this field has to offer. From exploring the intricacies of APIs to experimenting with AI-generated images, every step of the way has been a fascinating journey of discovery and learning.
 
             One of the most inspiring experiences that I had during this process was exploring "The Dumpster," an interactive web art project by Golan Levin and collaborators. This captivating artwork uses real postings extracted from millions of online blogs to create a visualization of the romantic lives of American teenagers. Visitors to the project can surf through tens of thousands of specific romantic relationships in which one person has "dumped" another, clicking on bubbles to reveal posts about breakups and rearranging the bubbles to create their own unique narrative.

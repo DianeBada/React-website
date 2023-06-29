@@ -91,9 +91,12 @@ scroll-padding-top: 2rem;
   
   .pink { background-color: #f78fb3; }
   .blue { background-color: #81cfe0; }
-  .green { background-color: #a3de83; }
+  .green { background-color: #5cde16; }
   .yellow { background-color: #ffeb3b; }
-  .red { background-color: #e57373; }
+  .red { background-color: #fe0808; }
+  .black {background-color: #000;}
+  .purple {background-color: rgb(210, 5, 210);}
+
   
   .font {
     font-size: 20px;
@@ -112,17 +115,26 @@ scroll-padding-top: 2rem;
     color: white;
   }
   
-  .buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  
-  .btn-rounded {
-    border-radius: 50px;
-    margin-right: 20px;
-  }
-  
+.btn-example{
+margin-left: 40%;
+margin-top: 20px;
+margin-bottom: 20px;}
+.button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: gray;
+}
+
   /* Media queries for responsive design */
   
   @media (max-width: 768px) {

@@ -14,8 +14,8 @@ function End() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://thefwa.com/dyn/resources/Case_Model_Case/thumbnail/5/13345/1608716786/5fe309598bf37thumbnail1.png"
+            alt="Photo of beauty in chaos in the digital realm"
           />
           <p>
           

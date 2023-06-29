@@ -11,7 +11,7 @@ function WeekThree() {
       <p className="date">Posted on May 10, 2023</p>
       <main>
         <section className="blog-content">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Photo of a student studying" />
+          <img src="https://www.artnet.com/WebServices/images/ll1274155llgq6e82CfDrCWvaHBOAD/david-kracov-reflections.jpg" alt="Photo of a student studying" />
           <p>Being an IM student and delving into the world of internet art has been a captivating and challenging experience. Throughout my journey, I have encountered various struggles that tested my perseverance and problem-solving skills. The process of mastering concepts like using states and props within React, implementing dynamic rendering, and ensuring code efficiency has been both rewarding and frustrating. Despite the difficulties, I have found alternative solutions and sought assistance when needed, realizing the importance of resourcefulness and collaboration. </p>
 
           <p>Exploring internet art has allowed me to unleash my creativity and think outside the box. From incorporating random images from online communities to envisioning interactive elements like colored balls or thought bubbles, I have sought to create engaging and immersive experiences for users. While there have been moments of self-doubt and dissatisfaction with initial attempts, I recognize that these are opportunities for growth and refinement.</p>

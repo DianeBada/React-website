@@ -14,12 +14,12 @@ function Week7() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://miro.medium.com/v2/resize:fit:1400/1*3eHEjMiT1ou-5kPOeC2OkQ.png"
+            alt="Photo of code Art"
           />
           <p>
           
-Introduction: In the ever-evolving landscape of web design, a topic often overlooked is the aesthetics of code. Beyond its functional purpose, code possesses its own beauty and elegance, capable of captivating both developers and users alike. This essay delves into the captivating realm of code aesthetics, exploring the intricate relationship between creativity, innovation, an,d the art of web design. By delving into various aspects such as code readability, simplicity, structure, documentation, design patterns, functional and non-functional aspects, personal and cultural influences, and the concept of code as art, we uncover the aesthetic allure that lies beneath the surface of web development.
+In the ever-evolving landscape of web design, a topic often overlooked is the aesthetics of code. Beyond its functional purpose, code possesses its own beauty and elegance, capable of captivating both developers and users alike. This essay delves into the captivating realm of code aesthetics, exploring the intricate relationship between creativity, innovation, an,d the art of web design. By delving into various aspects such as code readability, simplicity, structure, documentation, design patterns, functional and non-functional aspects, personal and cultural influences, and the concept of code as art, we uncover the aesthetic allure that lies beneath the surface of web development.
 
           </p>
           <p>
@@ -28,11 +28,13 @@ Introduction: In the ever-evolving landscape of web design, a topic often overlo
           <p>
           Just as an architect designs awe-inspiring structures, a skilled programmer crafts code that stands as a digital architectural marvel. Well-structured code follows modular design principles, creating logical compartments that seamlessly fit together. This organization mirrors the construction of a grand masterpiece, with each module, function, or class serving a clear purpose and contributing to the overall aesthetic appeal of the codebase. Clear and concise documentation complements the codebase, bridging the gap between developers and their creations. It becomes an art form in itself, gracefully explaining the intricacies of the code and contributing to its longevity and collaborative potential. Documentation serves as the artist's brush, vividly painting a picture of understanding and ensuring that the beauty of the code is not lost in translation. Like a skilled composer leveraging melodic patterns, programmers employ design patterns to orchestrate elegant solutions. These patterns guide the structure and flow of code, fostering consistency and maintainability. They provide a framework that allows developers to create harmonious compositions, blending innovation and familiarity to achieve both aesthetic appeal and functional efficiency.
         
+        
+          </p>
+
           <img
             src="https://freight.cargo.site/t/original/i/d5965c84d9b18e617f7e324f7e3863bc957eb4d4672fe6bbe89d025122438a9d/001.png"
-            alt="Photo of a student studying"
+            alt="Photo of Code Art"
           />
-          </p>
           <p>
           In the realm of code aesthetics, functionality and aesthetics go hand in hand. Performance optimization, error handling, and security considerations act as the pillars of an aesthetically pleasing codebase. Just as a captivating painting elicits emotions, well-optimized and robust code delivers reliable performance, establishing a deep connection with its audience. Within the realm of code aesthetics, personal style and cultural influences shape the tapestry of digital artistry. Like a painter leaving their unique brushstrokes on a canvas, programmers infuse their creations with a distinct signature. Cultural factors, industry standards, and coding practices act as guiding forces, weaving a rich tapestry of influences that define the aesthetics of code within a larger context.
           </p>

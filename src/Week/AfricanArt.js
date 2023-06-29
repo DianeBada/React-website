@@ -14,8 +14,8 @@ function Week7() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://img.freepik.com/free-vector/flat-african-pattern-design_23-2149376292.jpg?w=2000"
+            alt="Photo of African art"
           />
           <p>
           
@@ -52,12 +52,12 @@ function Week7() {
           <p>African digital art is a dynamic and rapidly evolving field that pushes boundaries, celebrates cultural diversity, and challenges the status quo. Through the fusion of traditional aesthetics and digital technologies, African artists have carved out a unique space for their creativity, utilizing digital platforms to tell stories, reclaim narratives, and inspire social change. As we embrace the future, it is essential to recognize and support the growth of African digital art, as it continues to shape the cultural landscape of the continent, amplify marginalized voices, and pave the way for a more inclusive and interconnected global art community.</p>
         </section>
         <section className="button-container-bottom">
-          <Link to = "/Week6">
+          <Link to = "/Week12">
             <button className="button button-left-bottom">
               <ArrowCircleLeftIcon/> Previous
             </button>
             </Link>          
-            <Link to = "/UIUX">
+            <Link to = "/week13">
             <button className="button button-right-bottom">
               Next <ArrowCircleRightIcon/>
             </button>

@@ -12,6 +12,9 @@ import memeswire from "../images/MemesWire.png";
 import screen226 from "../images/Screenshot (226).png";
 import screen227 from "../images/Screenshot (227).png";
 import screen228 from "../images/Screenshot (228).png";
+import main from "../images/wireframe-monitor (1).png";
+import chaos from "../images/chaos-wireframe (1).png";
+import beauty from "../images/beuaty-wirframe (1).png"
 
 const Wireframe = () => {
   useEffect(() => {
@@ -43,6 +46,13 @@ const Wireframe = () => {
           <section className="design-container">
             <section className="design-content">
               <section className="card-wrapper swiper-wrapper">
+
+              <section className="swiper-slide">
+                  <img
+                    src={main}
+                    alt="an image showing wireframe of monitor and website"
+                  />
+                </section>
                 <section className="swiper-slide">
                   <img
                     src={homeWire}
@@ -60,13 +70,7 @@ const Wireframe = () => {
                     src={blogsWire}
                     alt="an image showing wireframe of blog page"
                   />
-                </section>
-                <section className="swiper-slide">
-                  <img
-                    src={memeswire}
-                    alt="an image showing wireframe of internet art"
-                  />
-                </section>
+               
                 <section className="swiper-slide">
                   <img
                     src={screen226}
@@ -83,6 +87,21 @@ const Wireframe = () => {
                   <img
                     src={screen228}
                     alt="an image showing wireframe of blog page"
+                  />
+                </section>
+
+                </section>
+                <section className="swiper-slide">
+                  <img
+                    src={beauty}
+                    alt="an image showing wireframe of internet art"
+                  />
+                </section>
+
+                <section className="swiper-slide">
+                  <img
+                    src={chaos}
+                    alt="an image showing wireframe of internet art"
                   />
                 </section>
               </section>

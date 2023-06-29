@@ -14,8 +14,8 @@ function UIX() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://miro.medium.com/v2/resize:fit:1200/1*1Bw8tqzEYn6LzmQInimbFA.png"
+            alt="Photo of an image showing the difference between UI and UX"
           />
         <h2>Visual Design, Navigation, and Readability: </h2>
         <p>The website employs a well-structured and intuitive layout, complemented by a clear and accessible navigation bar. Each page is accurately labeled, allowing users to easily identify and access different sections. When hovering over the navigation items, they are visually highlighted, providing visual feedback and aiding in user orientation. Furthermore, upon landing on a specific page, a prominent heading immediately communicates the user's current location, ensuring clarity and navigation ease.</p>

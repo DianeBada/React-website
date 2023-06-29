@@ -14,8 +14,8 @@ function Week7() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_630,q_auto,w_1200/v1647949550/blog-post-open-graph-covers/000/010/352/10352-original.jpg?1647949550"
+            alt="Photo demonstarting AI and Art"
           />
           <p>
           

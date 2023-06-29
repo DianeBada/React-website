@@ -14,8 +14,8 @@ function WeekReflection() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://www.mjblehart.com/wp-content/uploads/2022/09/note-thanun-GI10ZiPO_3w-unsplash-1.jpg"
+            alt="Photo of a student beauty"
           />
          <p> The overall theme of my website is, “the beauty behind student chaos”. I chose this due to student’s chaos has universally proven to be a catalyst for creativity and innovation. When students are faced with a challenging and chaotic environment, they are forced to think outside the box and come up with new and creative solutions. This can lead to a wide range of interesting and exciting ideas, many of which can be expressed through art. The point of my internet art was to display the creative ways students have dealt with chaos – and that is the creativity that we call, memes. 
   Memes are a unique form of visual communication that combine humor, satire, and cultural references to create a shared experience that can be enjoyed by people from all walks of life. They are often used as a way of expressing complex ideas in a simple and accessible way, making them a perfect fit for the fast-paced and chaotic world of the internet.

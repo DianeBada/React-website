@@ -180,3 +180,12 @@ html, body {
   }
 }
 
+
+@media only screen and (max-width: 1600px) {
+  .aluminum-body{
+  margin-left: 5%;
+    width: 100%; /* Set the width to 100% to fit within the screen */
+  }
+}
+
+

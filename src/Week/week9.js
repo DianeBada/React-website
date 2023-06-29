@@ -11,7 +11,7 @@ function WeekThree() {
       <p className="date">Posted on April 28, 2023</p>
       <main>
         <section className="blog-content">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Photo of a student studying" />
+          <img src="https://repository-images.githubusercontent.com/37153337/9d0a6780-394a-11eb-9fd1-6296a684b124" alt="Photo of React js" />
           <p>This week, we embarked on our journey with React, and I must admit, it felt a bit daunting at first. Being relatively new to JavaScript, I found myself slightly overwhelmed by the prospect of using JSX throughout my entire codebase to deploy our website. Initially, I attempted to implement my homepage using traditional HTML, only to realize that React operates quite differently. However, with the help of a few tutorials, I started to grasp the fundamentals.</p>
 
           <p>Navigating the usage of components and understanding how to implement Routes posed some challenges for me. The video tutorial we were provided with seemed to work seamlessly, but when I attempted to apply it myself, I encountered some difficulties. Thankfully, Stack Overflow came to the rescue with a solution. Another area where I struggled was differentiating between class components and functional components. Even now, I still have some uncertainties, but somehow, it all comes together and functions as expected. I managed to successfully implement my homepage and design section within React, and surprisingly, it didn't take as long as I initially anticipated.</p>

@@ -13,8 +13,8 @@ function Week6() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffa3e8471-60c2-4993-aee5-c8fd30f5ec2b_1624x938.png"
+            alt="Photo showing a collage of memes"
           />
           <p>
             This week's foray into the world of internet art has been quite an

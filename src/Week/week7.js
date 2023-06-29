@@ -14,8 +14,8 @@ function Week7() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://miro.medium.com/v2/resize:fit:1400/0*HwxS2sIyLZn161J0"
+            alt="Photo of a man in pursuit of something new"
           />
           <p>
             This week's foray into the world of internet art has been quite an
@@ -78,7 +78,7 @@ function Week7() {
               <ArrowCircleLeftIcon/> Previous
             </button>
             </Link>          
-            <Link to = "/UIUX">
+            <Link to = "/WeekUIUX">
             <button className="button button-right-bottom">
               Next <ArrowCircleRightIcon/>
             </button>

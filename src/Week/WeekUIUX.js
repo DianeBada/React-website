@@ -14,8 +14,8 @@ function WeekUIUX() {
       <main>
         <section className="blog-content">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
-            alt="Photo of a student studying"
+            src="https://www.mindinventory.com/blog/wp-content/uploads/2021/03/mobile-app-design-fundamentals-the-difference-between-UI-and-UX.webp"
+            alt="Photo showing the difference between UI and UX"
           />
           <p>As a web design student, I have evaluated the user interface (UI) and user experience (UX) of my website, and this is the reflection I came up with.
   First and foremost, the website's design is visually appealing and consistent with its theme. The color scheme is well-chosen, and the font style is appropriate for the content. However, I did notice a few issues with the layout. The website's structure is not entirely intuitive, and it may take users some time to find the content they are looking for, such as the design section page. The three buttons could perhaps be something else or bigger. The navigation menu is not prominent, and it could be improved by using larger font sizes or changing its placement (which I have increased the size of the nav bar and its text).
